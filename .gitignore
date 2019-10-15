@@ -7,3 +7,6 @@ FenwickTree
 .vscode/tasks.json
 FenwickTree.dSYM/Contents/Info.plist
 FenwickTree.dSYM/Contents/Resources/DWARF/FenwickTree
+SegmentTree
+SegmentTree.dSYM/Contents/Resources/DWARF/SegmentTree
+SegmentTree.dSYM/Contents/Info.plist
