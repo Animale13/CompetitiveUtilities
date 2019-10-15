@@ -48,15 +48,12 @@ private:
         return (comp(A[p1],A[p2])) ? p1 : p2;
     }
 public:
-    SegmentTree(const vector <int> &_A, mode setMode){
+    SegmentTree(const vector <int> &_A, mode setMode = minimo){
         A = _A;
         n = (int)_A.size();
         curMod = setMode;
         st.assign(4*n, 0);
         build(1, 0, n-1);
-    }
-    SegmentTree(const vector <int> &_A){
-        SegmentTree(_A, minimo);
     }
 
     int rmq(int i, int j){
@@ -67,7 +64,7 @@ public:
 int main(){
     int arr[] = {18, 17, 13, 19, 15, 11, 20};
     vector <int> A(arr, arr+7);
-    SegmentTree st(A, massimo);
+    SegmentTree st(A);
     cout<<A[st.rmq(0, 3)]<<endl;
     cout<<A[st.rmq(4, 6)];
 
